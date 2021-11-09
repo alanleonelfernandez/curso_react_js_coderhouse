@@ -30,4 +30,11 @@ li a:hover {
 
 .navName{
     font: bold;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
 }
+
+.botonCarrito{
+    position: absolute;
+    left: 92%;
+}
+
