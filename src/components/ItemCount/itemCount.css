@@ -1,0 +1,13 @@
+.contador{
+    background-color: grey;
+    width: 20%;
+    height: auto;
+    color: white;
+    display:block;
+    text-align: center;
+    justify-content: center;
+}
+
+button{
+    margin: 5px;
+}
