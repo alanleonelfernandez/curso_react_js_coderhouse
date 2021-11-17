@@ -8,7 +8,7 @@ const Header = () => {
         <header>
             <nav>
                 <ul>
-                    <li><img src="../media/jugador-de-futbol.png" alt="futbol" className="icon"/></li>
+                    <li><img src="https://res.cloudinary.com/alanleonelfernandez/image/upload/v1637114399/jugador-de-futbol_jmmw4o.png" alt="futbol" className="icon"/></li>
                     <li><a href="#" className="navName">ARM Boots</a></li>
                     <li><a href="#">Home</a></li>
                     <li><a href="#">News</a></li>

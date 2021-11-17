@@ -1,13 +1,16 @@
 .contador{
-    background-color: grey;
-    width: 20%;
+    width: 100%;
     height: auto;
-    color: white;
+    color: cadetblue;
     display:block;
     text-align: center;
     justify-content: center;
 }
 
-button{
+.contador button{
     margin: 5px;
+    border-radius: 5px;
+    border-color: silver;
+    background-color: cadetblue;
+    color: white;
 }

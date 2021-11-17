@@ -10,7 +10,6 @@ const App = () => {
     <Fragment>
       <Header />
       <ItemList greeting="Bienvenidos al e-commerce de ARM Boots"></ItemList>
-        <ItemCount />
     </Fragment>
   );
 };

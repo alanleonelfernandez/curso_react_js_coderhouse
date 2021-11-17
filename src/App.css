@@ -39,6 +39,6 @@
 
 body{
   background-image: url(https://www.xtrafondos.com/wallpapers/uefa-champions-league-estadio-2932.jpg);
-  background-size: cover;
-  background-repeat: no-repeat;
+  background-size:cover;
+  background-attachment: fixed;
 }
