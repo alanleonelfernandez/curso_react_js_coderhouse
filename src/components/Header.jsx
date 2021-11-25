@@ -10,12 +10,12 @@ const Header = () => {
             <nav>
                 <ul>
                     <li><img src="https://res.cloudinary.com/alanleonelfernandez/image/upload/v1637114399/jugador-de-futbol_jmmw4o.png" alt="futbol" className="icon"/></li>
-                    <li><a href="#" className="navName">ARM Boots</a></li>
+                    <li><a href="/" className="navName">ARM Boots</a></li>
                     <li><Link to="/">Home</Link></li>
-                    <li><Link to="/">News</Link></li>
-                    <li><Link to="/">Products</Link></li>
-                    <li><Link to="/">About</Link></li>
-                    <a href="#" className="botonCarrito">
+                    <li><Link to="/News">News</Link></li>
+                    <li><Link to="/Products">Products</Link></li>
+                    <li><Link to="/About">About</Link></li>
+                    <a href="/" className="botonCarrito">
                         <CartWidget />
                     </a>                    
                 </ul>

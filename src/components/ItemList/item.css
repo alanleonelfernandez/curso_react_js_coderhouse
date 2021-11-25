@@ -9,10 +9,22 @@
     margin: 20px;
     padding: 20px;
     text-align: center;
+    -webkit-transition: all .5s ease-in-out;
+    -moz-transition: all .5s ease-in-out;
+    -o-transition: all .5s ease-in-out;
+    -ms-transition: all .5s ease-in-out;
 }
 
 .cardItem img{
+    border-radius: 40px;
     width: 300px;
     height: auto;
+}
+
+.cardItem:hover{
+    -webkit-transform: scale(1.1); 
+    -moz-transform: scale(1.1);
+    -o-transform: scale(1.1);
+    transform: scale(1.1);
 }
 

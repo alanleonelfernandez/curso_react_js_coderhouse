@@ -13,13 +13,13 @@ const App = () => {
   return (
     <BrowserRouter>
       <Header />
-      <ItemList greeting="Bienvenidos al e-commerce de ARM Boots"></ItemList>
       <Routes>
         <Route path="/Home" element={<Home />} />
         <Route path="/News" element={<News />} />
         <Route path="/Products" element={<Products />} />
         <Route path="/About" element={<About />} />
       </Routes>
+      <ItemList greeting="Bienvenidos al e-commerce de ARM Boots"></ItemList>
     </BrowserRouter>
   );
 };
