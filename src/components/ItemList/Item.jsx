@@ -10,8 +10,8 @@ const Item = ({item})=>{
                 <img src={item.img} alt="producto"/>
             </Link>
             <h2>{item.name}</h2>
-            <p>AR${item.price}</p>
-            <ItemCount />
+{/*             <p>AR${item.price}</p>
+            <ItemCount stock={item.stock} /> */}
         </div>
     </div>
 };

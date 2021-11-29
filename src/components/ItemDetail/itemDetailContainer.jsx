@@ -4,14 +4,15 @@ import ItemDetail from '../ItemDetail/ItemDetail'
 import {products} from '../ItemList/Items'
 
 const ItemDetailContainer = ()=>{
-    const {id} = useParams();
     const [item, setItem] = useState({});
+    const {id} = useParams();
+    const [irAlCarrito, setIrAlCarrito] = useState(false);
 
     useEffect(()=>{
         const traerProducto = new Promise ((resolve, reject)=>{
             setTimeout(()=>{
                 resolve(products)
-            }, 2000)
+            }, 1500)
         });
         traerProducto
             .then((res)=>{
@@ -25,9 +26,14 @@ const ItemDetailContainer = ()=>{
             console.log(error)
         })
     }, [id]);
+
+    const onAdd = (cantidad)=>{
+        setIrAlCarrito(true);
+    }
+
     return(
         <>
-            <ItemDetail item={item} />
+            <ItemDetail item={item} onAdd={onAdd} irAlCarrito={irAlCarrito}/>
         </>
     );
 };

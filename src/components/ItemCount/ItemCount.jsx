@@ -1,32 +1,24 @@
-import {useState} from "react";
+import React, {useState} from "react";
 import './itemCount.css'
 
-const ItemCount = ()=>{
-    const [number, setNumber] = useState(1)
+const ItemCount = ({stock, onAdd})=>{
+    const [number, setNumber] = useState(0)
 
     const incrementar = ()=>{
-        if(number < 7){
-            setNumber(number + 1)
-        }else{
-            alert("Stock maximo alcanzado")
-        }
-        
+        number !== stock && setNumber(number + 1);
     }
     const disminuir = ()=>{
-        if(number >= 2){
-            setNumber(number - 1)
-        }else{
-            setNumber(number)
-        }
-
+        number !== 0 && setNumber (number - 1);
     }
+
+
     return(
         <>
             <div className="contador">
                 <button onClick={incrementar}>+</button>
                 <button onClick={disminuir}>-</button>
                 <p>{number}</p>
-                <button>Agregar al carrito</button>
+                <button disabled={number === 0} onClick={()=> onAdd(number)}>Agregar al carrito</button>
             </div>
         </>
     )

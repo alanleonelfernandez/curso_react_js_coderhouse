@@ -7,6 +7,7 @@ import Home from './pages/Home/Home';
 import News from './pages/News/News'
 import About from './pages/AboutUs/About'
 import ItemDetailContainer from './components/ItemDetail/itemDetailContainer';
+import Cart from './components/Cart';
 
 
 const App = () => {
@@ -19,6 +20,7 @@ const App = () => {
         <Route path="/Products" element={<ItemList greeting="Bienvenidos al e-commerce de ARM Boots"></ItemList>} />
         <Route path="/About" element={<About />} />
         <Route path="/item/:id" element={<ItemDetailContainer />} />
+        <Route path="/cart" element={<Cart />} />
       </Routes>
     </BrowserRouter>
   );

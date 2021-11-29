@@ -15,9 +15,9 @@ const Header = () => {
                     <li><Link to="/News">News</Link></li>
                     <li><Link to="/Products">Products</Link></li>
                     <li><Link to="/About">About</Link></li>
-                    <a href="/" className="botonCarrito">
+                    <Link to="/Cart" className="botonCarrito">
                         <CartWidget />
-                    </a>                    
+                    </Link>                    
                 </ul>
             </nav>
         </header>
