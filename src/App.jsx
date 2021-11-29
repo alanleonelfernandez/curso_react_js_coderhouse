@@ -5,8 +5,8 @@ import ItemList from './components/ItemListContainer/ItemListContainer';
 import { BrowserRouter, Routes, Route } from 'react-router-dom';
 import Home from './pages/Home/Home';
 import News from './pages/News/News'
-import Products from './pages/Products/Products'
 import About from './pages/AboutUs/About'
+import ItemDetailContainer from './components/ItemDetail/itemDetailContainer';
 
 
 const App = () => {
@@ -14,12 +14,12 @@ const App = () => {
     <BrowserRouter>
       <Header />
       <Routes>
-        <Route path="/Home" element={<Home />} />
+        <Route path="/" element={<Home />} />
         <Route path="/News" element={<News />} />
-        <Route path="/Products" element={<Products />} />
+        <Route path="/Products" element={<ItemList greeting="Bienvenidos al e-commerce de ARM Boots"></ItemList>} />
         <Route path="/About" element={<About />} />
+        <Route path="/item/:id" element={<ItemDetailContainer />} />
       </Routes>
-      <ItemList greeting="Bienvenidos al e-commerce de ARM Boots"></ItemList>
     </BrowserRouter>
   );
 };

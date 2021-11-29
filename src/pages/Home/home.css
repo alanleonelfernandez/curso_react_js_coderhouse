@@ -1,0 +1,38 @@
+.homeCard{
+    border-radius: 50px;
+    box-shadow: 10px 10px silver;
+    background-color: white;
+    color: black;
+    font: bolder;
+    width: 50%;
+    height: auto;
+    margin: 20px;
+    padding: 20px;
+    text-align: center;
+}
+
+.homeCard p{
+    font-size: 15px;
+    margin: 5px;
+}
+
+.homeCard h1{
+    color:black;
+    margin: 10px;
+}
+
+.homePadre{
+    display: flex;
+    justify-content: center;
+    align-content: center;
+}
+
+.homeCard img{
+    width: 40em;
+    height: auto;
+    border-radius: 20px;
+}
+
+.homeCard img:hover{
+    opacity: 0.6;
+}
