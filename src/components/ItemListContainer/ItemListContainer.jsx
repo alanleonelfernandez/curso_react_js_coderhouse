@@ -8,7 +8,7 @@ const ItemListContainer = (props)=>{
     const traerProductos = new Promise ((resolve, reject)=>{
         setTimeout(()=>{
             resolve(products)
-        }, 2000)
+        }, 500)
     })
     traerProductos
     .then((res)=>{

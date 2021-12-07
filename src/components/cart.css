@@ -1,0 +1,25 @@
+.carrito{
+    border-radius: 50px;
+    box-shadow: 10px 10px silver;
+    background-color: white;
+    color:cadetblue ;
+    font: bolder;
+    width: 200px;
+    height: auto;
+    margin: 10px;
+    padding: 10px;
+    text-align: center;
+}
+
+.carrito img{
+    border-radius: 40px;
+    width: 100px;
+    height: auto;
+}
+
+.padreCarrito{
+    display: flex;
+    flex-wrap: wrap;
+    align-content: space-between;
+    justify-content: center;
+}

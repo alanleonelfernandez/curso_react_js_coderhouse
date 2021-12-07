@@ -2,3 +2,39 @@
     color: black;
     font-size: 10px;
 }
+
+.cardDetail{
+    border-radius: 50px;
+    box-shadow: 10px 10px silver;
+    background-color: white;
+    color:cadetblue ;
+    font: bolder;
+    width: 40%;
+    height: auto;
+    margin: 20px;
+    padding: 20px;
+    text-align: center;
+}
+
+.cardDetail img{
+    border-radius: 40px;
+    width: 70%;
+    height: auto;
+    -webkit-transition: all .5s ease-in-out;
+    -moz-transition: all .5s ease-in-out;
+    -o-transition: all .5s ease-in-out;
+    -ms-transition: all .5s ease-in-out;
+}
+
+.cardDetail img:hover{
+    -webkit-transform: scale(1.1); 
+    -moz-transform: scale(1.1);
+    -o-transform: scale(1.1);
+    transform: scale(1.1);
+}
+
+.detailPadre{
+    display: flex;
+    justify-content: center;
+    align-content: center;
+}
