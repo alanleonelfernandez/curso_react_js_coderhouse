@@ -1,25 +1,31 @@
-import React, {useState} from 'react'
+import React, {useEffect, useState} from 'react'
 import './itemListContainer.css'
 import ItemList from '../ItemList/ItemList'
-import {products} from '../ItemList/Items'
+import { useParams } from 'react-router-dom'
+import { collection, getDocs, getFirestore} from 'firebase/firestore'
 
-const ItemListContainer = (props)=>{
+const ItemListContainer = ()=>{
     const [items, setItems] = useState([])
-    const traerProductos = new Promise ((resolve, reject)=>{
-        setTimeout(()=>{
-            resolve(products)
-        }, 500)
-    })
-    traerProductos
-    .then((res)=>{
-        setItems(res)
-    })
-    .catch((error)=>{
-        console.log(error)
-    })
+    const {id} = useParams();
+
+    useEffect(()=>{
+        const db = getFirestore();
+        const ref = collection(db, 'products');
+        getDocs(ref)
+        .then((snapshot) => {
+            const products = snapshot.docs.map((doc)=>{
+                return{
+                    id: doc.id,
+                    ...doc.data(),
+                };
+            });
+            const categorias = products.filter((i)=> i.categorias === `${id}`);
+            id === undefined ? setItems(products) : setItems(categorias)
+        });
+    }, [id]);
+
     return(
         <>
-            <h1>{props.greeting}</h1>
             <ItemList items={items} />
         </>
     )

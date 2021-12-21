@@ -1,45 +1,30 @@
-import React, {useEffect, useState, useContext} from 'react'
+import React, {useEffect, useState} from 'react'
 import { useParams } from 'react-router-dom'
 import ItemDetail from '../ItemDetail/ItemDetail'
-import {products} from '../ItemList/Items'
-import { CartContext } from '../../context/CartContext'
+import { doc, getDoc, getFirestore } from 'firebase/firestore'
 
 const ItemDetailContainer = ()=>{
     const [item, setItem] = useState({});
     const {id} = useParams();
-    const [irAlCarrito, setIrAlCarrito] = useState(false);
-    const {addToCart} = useContext(CartContext);
 
     useEffect(()=>{
-        const traerProducto = new Promise ((resolve, reject)=>{
-            setTimeout(()=>{
-                resolve(products)
-            }, 500)
+        const db = getFirestore();
+        const ref = doc(db, 'products', id);
+        getDoc(ref).then((snap)=>{
+            setItem({
+                id: snap.id,
+                ...snap.data(),
+            });
         });
-        traerProducto
-            .then((res)=>{
-                const producto = res.find(
-                    (prod) => prod.id === parseInt(id)
-                );
-                setItem(producto)
-                
-        })
-        .catch((error)=>{
-            console.log(error)
-        })
     }, [id]);
-
-    const onAdd = (cantidad)=>{
-        addToCart(item, cantidad)
-
-        setIrAlCarrito(true);
-    }
 
     return(
         <>
-            <ItemDetail item={item} onAdd={onAdd} irAlCarrito={irAlCarrito}/>
+            <ItemDetail item={item}/>
         </>
     );
 };
 
 export default ItemDetailContainer
+
+// onAdd={onAdd} irAlCarrito={irAlCarrito}
